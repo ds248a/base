@@ -3,7 +3,7 @@ Base library for microservices
 
 ## Main components
 
-### app > app_identity
+** app > app_identity **
 github.com/satori/go.uuid  
 
 

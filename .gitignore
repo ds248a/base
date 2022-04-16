@@ -1,4 +1,6 @@
 *~
 *.sublime*
+*.mod
+*.sum
 .git/
 vendor/

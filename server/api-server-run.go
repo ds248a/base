@@ -7,12 +7,12 @@ import (
 	"github.com/ds248a/base/pkg/parallel"
 )
 
-//RunAPIServersOption option interface to call RunAPIServers
+// RunAPIServersOption option interface to call RunAPIServers
 type RunAPIServersOption interface {
 	apply(*runAPIServersOptions) error
 }
 
-//Run can run one or more API servers
+// Run can run one or more API servers
 func (srv *APIServer) Run(ctx context.Context, endpoint *pkgNet.Endpoint, options ...RunAPIServersOption) error {
 	const api = "APIServer.Run"
 

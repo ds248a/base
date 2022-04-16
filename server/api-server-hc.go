@@ -5,11 +5,11 @@ import (
 	"sync/atomic"
 
 	"github.com/ds248a/base/server/health_check"
-	
+
 	"google.golang.org/grpc"
 )
 
-//HealthCheck optional to APIService interface
+// HealthCheck optional to APIService interface
 type HealthCheck interface {
 	HealthProbe(ctx context.Context) (*health_check.Response, error)
 }

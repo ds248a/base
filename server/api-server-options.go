@@ -12,7 +12,7 @@ import (
 	"google.golang.org/grpc/tap"
 )
 
-//WithDocs добавим сваггер доку
+// WithDocs добавим сваггер доку
 func WithDocs(docs *SwaggerSpec, anURLSuffix string) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		if srv.docs = docs; docs != nil {
@@ -24,7 +24,7 @@ func WithDocs(docs *SwaggerSpec, anURLSuffix string) APIServerOption {
 	})
 }
 
-//WithServices добавим service APIs к серверу
+// WithServices добавим service APIs к серверу
 func WithServices(services ...APIService) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		for _, s := range services {
@@ -36,7 +36,7 @@ func WithServices(services ...APIService) APIServerOption {
 	})
 }
 
-//WithGrpcServerOptions добавим GRPC опции
+// WithGrpcServerOptions добавим GRPC опции
 func WithGrpcServerOptions(options ...grpc.ServerOption) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		srv.grpcOptions = append(srv.grpcOptions, options...)
@@ -44,7 +44,7 @@ func WithGrpcServerOptions(options ...grpc.ServerOption) APIServerOption {
 	})
 }
 
-//WithGatewayOptions добавим GW-2-GRPC опции
+// WithGatewayOptions добавим GW-2-GRPC опции
 func WithGatewayOptions(options ...runtime.ServeMuxOption) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		srv.gatewayOptions = append(srv.gatewayOptions, options...)
@@ -52,7 +52,7 @@ func WithGatewayOptions(options ...runtime.ServeMuxOption) APIServerOption {
 	})
 }
 
-//WithStatsHandlers добавим stats.Handler-ы
+// WithStatsHandlers добавим stats.Handler-ы
 func WithStatsHandlers(handlers ...stats.Handler) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		srv.grpcStatsHandlers = append(srv.grpcStatsHandlers, handlers...)
@@ -60,7 +60,7 @@ func WithStatsHandlers(handlers ...stats.Handler) APIServerOption {
 	})
 }
 
-//WithTapInHandlers добавим tap.ServerInHandle-ы
+// WithTapInHandlers добавим tap.ServerInHandle-ы
 func WithTapInHandlers(handlers ...tap.ServerInHandle) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		srv.grpcTapHandlers = append(srv.grpcTapHandlers, handlers...)
@@ -68,7 +68,7 @@ func WithTapInHandlers(handlers ...tap.ServerInHandle) APIServerOption {
 	})
 }
 
-//WithUnaryInterceptors добавим унарные перехвачики
+// WithUnaryInterceptors добавим унарные перехвачики
 func WithUnaryInterceptors(interceptors ...grpc.UnaryServerInterceptor) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		srv.grpcUnaryInterceptors = append(srv.grpcUnaryInterceptors, interceptors...)
@@ -76,7 +76,7 @@ func WithUnaryInterceptors(interceptors ...grpc.UnaryServerInterceptor) APIServe
 	})
 }
 
-//WithStreamInterceptors добавим стримовые перехватчики
+// WithStreamInterceptors добавим стримовые перехватчики
 func WithStreamInterceptors(interceptors ...grpc.StreamServerInterceptor) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		srv.grpcStreamInterceptors = append(srv.grpcStreamInterceptors, interceptors...)
@@ -84,7 +84,7 @@ func WithStreamInterceptors(interceptors ...grpc.StreamServerInterceptor) APISer
 	})
 }
 
-//WithRecovery ...
+// WithRecovery
 func WithRecovery(recovery *interceptors.Recovery) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		srv.addDefInterceptors &= ^interceptors.DefRecovery
@@ -93,7 +93,7 @@ func WithRecovery(recovery *interceptors.Recovery) APIServerOption {
 	})
 }
 
-//SkipDefInterceptors ...
+// SkipDefInterceptors
 func SkipDefInterceptors(ids ...interceptors.DefInterceptor) APIServerOption {
 	return serverOptApplier(func(srv *APIServer) error {
 		for _, interceptorID := range ids {
@@ -111,7 +111,7 @@ func WithTracer(t GRPCTracer) APIServerOption {
 	})
 }
 
-//WithHttpHandler add HTTP handler for pattern
+// WithHttpHandler add HTTP handler for pattern
 func WithHttpHandler(pattern string, handler http.Handler) APIServerOption { //nolint:revive
 	return serverOptApplier(func(srv *APIServer) error {
 		pattern = "/" + strings.Trim(

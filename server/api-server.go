@@ -14,7 +14,7 @@ import (
 )
 
 type (
-	//APIServer an API server
+	// APIServer an API server
 	APIServer struct {
 		urlDocsSuffix          string
 		docs                   *SwaggerSpec
@@ -31,19 +31,19 @@ type (
 		grpcTracer             GRPCTracer
 	}
 
-	//GRPCTracer tracer
+	// GRPCTracer tracer
 	GRPCTracer interface {
 		TraceUnaryCalls(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (interface{}, error)
 		TraceStreamCalls(srv interface{}, ss grpc.ServerStream, info *grpc.StreamServerInfo, handler grpc.StreamHandler) error
 	}
 
-	//APIServerOption опции для APIServer
+	// APIServerOption опции для APIServer
 	APIServerOption interface {
 		apply(*APIServer) error
 	}
 )
 
-//NewAPIServer makes new API server
+// NewAPIServer makes new API server
 func NewAPIServer(options ...APIServerOption) (*APIServer, error) {
 	const api = "NewAPIServer"
 
@@ -114,6 +114,7 @@ type (
 	httpHandlers = map[string]http.Handler
 )
 
+// addService
 func (srv *APIServer) addService(service APIService) error {
 	d := service.Description()
 	if _, isIn := srv.apis[d.ServiceName]; isIn {

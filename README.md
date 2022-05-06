@@ -1,7 +1,7 @@
 # Base
 
 Шаблон построения клиент-серверных приложений, включающий пакеты приложений:
-chi, grpc, cmux, testify, zap, opentelemetry, prometheus
+**chi, grpc, cmux, testify, zap, opentelemetry, prometheus**
 
 ## Main components
 

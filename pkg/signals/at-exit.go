@@ -5,9 +5,10 @@ import (
 	"sync"
 	"syscall"
 
+	"github.com/ds248a/base/pkg/lazy"
+	"github.com/ds248a/base/pkg/patterns/observer"
+
 	"github.com/pkg/errors"
-	"github.com/thataway/common-lib/pkg/lazy"
-	"github.com/thataway/common-lib/pkg/patterns/observer"
 	"go.uber.org/multierr"
 )
 

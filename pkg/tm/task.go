@@ -3,7 +3,8 @@ package tm
 import (
 	"github.com/pkg/errors"
 	uuid "github.com/satori/go.uuid"
-	"github.com/thataway/common-lib/pkg/functional"
+
+	"github.com/ds248a/base/pkg/functional"
 )
 
 type (

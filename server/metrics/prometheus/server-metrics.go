@@ -2,6 +2,7 @@ package prometheus_metrics
 
 import (
 	"github.com/ds248a/base/server/interceptors"
+
 	"github.com/prometheus/client_golang/prometheus"
 )
 

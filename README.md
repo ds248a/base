@@ -1,5 +1,7 @@
-# base
-Base library for microservices
+# Base
+
+Шаблон построения клиент-серверных приложений, включающий пакеты приложений:
+chi, grpc, cmux, testify, zap, opentelemetry, prometheus
 
 ## Main components
 

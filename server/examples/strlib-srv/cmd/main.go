@@ -4,13 +4,13 @@ import (
 	"context"
 	"time"
 
-	"github.com/thataway/common-lib/logger"
-	pkgNet "github.com/thataway/common-lib/pkg/net"
-	"github.com/thataway/common-lib/pkg/signals"
-	"github.com/thataway/common-lib/server"
-	strlibSrv "github.com/thataway/common-lib/server/examples/strlib-srv"
-	"github.com/thataway/common-lib/server/interceptors"
-	serverMetrics "github.com/thataway/common-lib/server/metrics/prometheus"
+	"github.com/ds248a/base/logger"
+	pkgNet "github.com/ds248a/base/pkg/net"
+	"github.com/ds248a/base/pkg/signals"
+	"github.com/ds248a/base/server"
+	strlibSrv "github.com/ds248a/base/server/examples/strlib-srv"
+	"github.com/ds248a/base/server/interceptors"
+	serverMetrics "github.com/ds248a/base/server/metrics/prometheus"
 	"go.uber.org/zap"
 )
 

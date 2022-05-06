@@ -9,8 +9,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+
 	"go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
 	sdkTrace "go.opentelemetry.io/otel/sdk/trace"
+
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

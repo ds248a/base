@@ -5,8 +5,9 @@ import (
 	"net/http"
 
 	"github.com/pkg/errors"
-	"github.com/thataway/common-lib/app/jobs"
-	"github.com/thataway/common-lib/pkg/tm"
+
+	"github.com/ds248a/base/app/jobs"
+	"github.com/ds248a/base/pkg/tm"
 
 	"github.com/prometheus/client_golang/prometheus/push"
 )

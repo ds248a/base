@@ -5,7 +5,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/thataway/common-lib/pkg/patterns/observer"
+	"github.com/ds248a/base/pkg/patterns/observer"
 )
 
 //SignalFromOS signals incoming from OS

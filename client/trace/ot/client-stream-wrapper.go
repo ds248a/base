@@ -5,11 +5,13 @@ import (
 	"io"
 	"sync"
 
-	otPriv "github.com/thataway/common-lib/internal/pkg/ot"
+	otPriv "github.com/ds248a/base/internal/pkg/ot"
+
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
 	"go.opentelemetry.io/otel/trace"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"

@@ -8,7 +8,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/thataway/common-lib/pkg/functional"
+
+	"github.com/ds248a/base/pkg/functional"
 )
 
 func Test_TaskManager(t *testing.T) {

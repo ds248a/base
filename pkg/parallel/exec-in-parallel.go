@@ -4,7 +4,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/thataway/common-lib/pkg/lazy"
+	"github.com/ds248a/base/pkg/lazy"
 )
 
 //ExecAbstract uses abstract algorithm to execute some task in parallel manner

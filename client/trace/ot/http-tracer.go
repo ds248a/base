@@ -6,14 +6,16 @@ import (
 	"net/url"
 	"path"
 
-	appIdentity "github.com/thataway/common-lib/app/identity"
-	"github.com/thataway/common-lib/logger"
-	netPkg "github.com/thataway/common-lib/pkg/net"
+	appIdentity "github.com/ds248a/base/app/identity"
+	"github.com/ds248a/base/logger"
+	netPkg "github.com/ds248a/base/pkg/net"
+
 	"go.opentelemetry.io/otel/attribute"
 	otCodes "go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/propagation"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
 	"go.opentelemetry.io/otel/trace"
+
 	"go.uber.org/zap"
 )
 

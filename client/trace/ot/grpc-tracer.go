@@ -7,14 +7,16 @@ import (
 	"runtime"
 	"strconv"
 
-	appIdentity "github.com/thataway/common-lib/app/identity"
-	otPriv "github.com/thataway/common-lib/internal/pkg/ot"
-	"github.com/thataway/common-lib/pkg/conventions"
-	netPkg "github.com/thataway/common-lib/pkg/net"
+	appIdentity "github.com/ds248a/base/app/identity"
+	otPriv "github.com/ds248a/base/internal/pkg/ot"
+	"github.com/ds248a/base/pkg/conventions"
+	netPkg "github.com/ds248a/base/pkg/net"
+
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/propagation"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
 	"go.opentelemetry.io/otel/trace"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 )

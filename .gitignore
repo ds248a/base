@@ -1,6 +1,6 @@
 *~
 *.sublime*
-*.mod
-*.sum
+.idea
+.vscode
 .git/
 vendor/

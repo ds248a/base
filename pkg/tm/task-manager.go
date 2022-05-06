@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/thataway/common-lib/pkg/functional"
+	"github.com/ds248a/base/pkg/functional"
 )
 
 //TaskStatus TBD

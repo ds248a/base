@@ -3,7 +3,8 @@ package ot
 import (
 	"context"
 
-	appIdentity "github.com/thataway/common-lib/app/identity"
+	appIdentity "github.com/ds248a/base/app/identity"
+
 	"go.opentelemetry.io/otel/attribute"
 	sdkRes "go.opentelemetry.io/otel/sdk/resource"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"

@@ -3,18 +3,15 @@
 Шаблон построения клиент-серверных приложений, включающий пакеты приложений:
 **chi, grpc, cmux, testify, zap, opentelemetry, prometheus**
 
-## Main components
+## Основные компоненты и их версии
 
-**app > app_identity**  
+**app**  
 github.com/satori/go.uuid  
-
-
-**app > jobs**  
 go.uber.org/zap  
-github.com/stretchr/testify/assert  
+github.com/stretchr/testify  
 
 
-**client > gRPC**  
+**client**  
 google.golang.org/grpc  
 
 
@@ -26,42 +23,35 @@ github.com/soheilhy/cmux
 github.com/go-openapi/spec  
 
 
-**server > health_check**  
+**server - health**  
 google.golang.org/grpc  
 google.golang.org/grpc/health/grpc_health_v1  
 github.com/grpc-ecosystem/go-grpc-middleware  
 
 
-**server > interceptors**  
+**server - interceptors**  
 google.golang.org/grpc  
 
 
-**server > internal**  
-github.com/soheilhy/cmux  
-github.com/go-openapi/spec  
-
-
-**server > metrics (prometheus)**  
+**server - metrics (prometheus)**  
 github.com/prometheus/client_golang/prometheus  
 
 
-**server > swagger_ui**  
-github.com/go-openapi/spec  
-github.com/rakyll/statik/fs  
-
-
-**metrics > prometheus**  
+**metrics - prometheus**  
 github.com/prometheus/common/expfmt  
 github.com/prometheus/client_golang/prometheus  
 github.com/prometheus/client_golang/prometheus/push  
 
+**server - swagger_ui**  
+github.com/go-openapi/spec  
+github.com/rakyll/statik/fs  
 
-**server > trace**  
-go.opentelemetry.io/otel  
+**server - trace**  
 google.golang.org/grpc  
+go.opentelemetry.io/otel  
 
 
-**tracing / otel**  
+**tracing - otel**  
 go.opentelemetry.io/otel  
 go.opentelemetry.io/otel/sdk/trace  
 go.opentelemetry.io/otel/attribute  
